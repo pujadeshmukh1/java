@@ -1,0 +1,30 @@
+There are three types of relationship 
+
+1.One to one
+2. One to many
+3. many to many
+
+One to One
+ It means that a record in the first table can have one and only record related  to it in a table.
+ 
+ Ex:
+ A product listed in a product table would have only one country of origin record in an operation table.
+ 
+  
+  One to many
+  
+  most common relationship between table is one to many relationship.In a one to many relationship, a record in the first table is related to 
+  multiple records in the second table.
+  
+  Ex:An employee talbe can have a relationship with payroll table that has multiple records.
+  
+  
+  Many to Many
+  
+  It is defined as a record in the first table having multiple relationships in the second table and those records int the second table also
+  having multiple relationships within the first table
+  
+  Ex: 
+ 
+  An Streaming service can have TV series that are selected to view by multiple customers while each customer of the service would watch multiple
+  TV series.

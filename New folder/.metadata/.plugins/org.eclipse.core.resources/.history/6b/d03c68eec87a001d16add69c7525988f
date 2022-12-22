@@ -1,0 +1,14 @@
+package com.masai.service;
+
+import com.masai.exception.AccountException;
+import com.masai.model.Account;
+
+public class AccountserviceIMpl implements Accountservice{
+
+	@Override
+	public Account openAccount(Account acc) throws AccountException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

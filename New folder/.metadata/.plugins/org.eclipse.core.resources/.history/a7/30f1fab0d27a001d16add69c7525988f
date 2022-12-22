@@ -1,0 +1,32 @@
+package com.masai.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.masai.exception.CustomerException;
+import com.masai.model.Customer;
+import com.masai.model.CustomerDTO;
+import com.masai.repository.CustomerRepo;
+
+
+@Service
+public class CustomerServiceImpl implements CustomerService{
+
+	@Autowired
+	private CustomerRepo dao;
+
+	@Override
+	public Customer registerCustomer(Customer Customer) throws CustomerException {
+
+        Customer c= dao.save(Customer);
+		return null;
+	}
+	
+	
+
+//	Employee empl=dao.save(emp);
+//	return empl;
+
+}

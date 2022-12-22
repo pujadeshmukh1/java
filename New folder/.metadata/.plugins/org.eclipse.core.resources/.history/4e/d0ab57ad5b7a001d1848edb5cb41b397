@@ -1,0 +1,9 @@
+package exception;
+
+public class MyErrorDetails {
+
+	public MyErrorDetails() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

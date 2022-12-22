@@ -1,0 +1,25 @@
+package com.masai.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.masai.exception.AccountException;
+import com.masai.model.Account;
+import com.masai.repository.AccountRepo;
+
+@Service
+public class AccountserviceIMpl implements Accountservice{
+
+	@Autowired
+	private AccountRepo sRepo;
+
+	@Override
+	public Account openAccount(Account acc) throws AccountException {
+
+		Account savedStudent= sRepo.save(acc);
+		
+		return savedStudent;
+	}
+	
+	
+}

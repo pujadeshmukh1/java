@@ -1,0 +1,17 @@
+package com.masai;
+
+public class Clerk implements Education{
+
+	
+	public void registerStudent(){
+		 System.out.println("enroll the Student in Collage");
+		}
+	
+	
+	@Override
+	public void start() {
+		// TODO Auto-generated method stub
+		registerStudent();
+	}
+
+}

@@ -1,0 +1,83 @@
+Q3/- What do you mean by a Race condition, How to solve a race condition, give a proper
+example.
+
+Answer -:
+A condition in which the critical section (a part of the program where shared memory is accessed) 
+is concurrently executed by two or more threads. It leads to incorrect behavior of a program.
+
+In layman terms, a race condition can be defined as, a condition in which two or more threads 
+compete together to get certain shared resources.
+
+For example, if thread A is reading data from the linked list and another thread B is trying to 
+delete the same data. This process leads to a race condition that may result in run time error.
+
+
+How do you Prevent Race Conditions?
+The ideal way to prevent a race-around condition is by controlling access to the 
+critical section of your code.
+
+In Java, we can make use of the following constructs:
+
+synchronized keyword: By wrapping a shared resource or a code block with a synchronized keyword, 
+only one thread can access the shared resource or the code block at a time
+
+volatile keyword: If we qualify a variable with a volatile keyword, then threads do not create a 
+local copy of the variable in their local memory. Thus, concurrent threads do not report the 
+different value of the same variable at a point in time, avoiding a race scenario.
+
+
+Race condition demo----------------
+
+package week4.day3;
+
+public class Race {
+}
+class Counter implements Runnable
+{
+private int c = 0;
+public void increment()
+{
+try
+{
+Thread.sleep(10);
+}
+catch (InterruptedException e)
+{
+//Auto-generated catch block
+e.printStackTrace();
+}
+c++;
+}
+public void decrement()
+{
+c--;
+}
+public int getValue()
+{
+return c;
+}
+@Override
+public void run()
+{
+//incrementing
+this.increment();
+System.out.println("Value for Thread After increment " + Thread.currentThread().getName() + " " + this.getVa
+lue());
+//decrementing
+this.decrement();
+System.out.println("Value for Thread at last " + Thread.currentThread().getName() + " " + this.getValue());
+}
+}
+class RaceConditionDemo
+{
+public static void main(String args[])
+{
+Counter counter = new Counter();
+Thread t1 = new Thread(counter, "Thread-1");
+Thread t2 = new Thread(counter, "Thread-2");
+Thread t3 = new Thread(counter, "Thread-3");
+t1.start();
+t2.start();
+t3.start();
+}
+}

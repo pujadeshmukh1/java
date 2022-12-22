@@ -1,0 +1,19 @@
+Question 1. What do you understand by IOC?
+
+Ans.IOC means inversion of control. Moreover it has very importand role in Java.When we progaram in Java and we create an object that is called IOC.
+
+
+
+
+Question 2 .Dependency Injection 
+
+
+Ans.Depency injection is the technique that makes a class independenc of its depedency.transferring the task of creating the object to someone else and directly using the dependency is called dependency injection.
+
+
+
+Qeustion 3 . Life Cycle of Spring Bean
+
+
+Ans.Bean life cycle is managed by the spring container. When we run the program then, first the spring container gets started. After the container, and then dependencies
+    are injected. Finally the bean is destroyed when the spring contianer is closed.

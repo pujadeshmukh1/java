@@ -1,0 +1,22 @@
+package service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.masai.model.Student;
+import com.masai.repository.StudentDao;
+
+public class StudentServiceImpl implements StudentService{
+
+	@Autowired
+	private StudentDao sdao;
+
+	@Override
+	public Student registerStudent(Student student) {
+		Student savedStudent = sdao.save(student);
+
+		return savedStudent;
+	}
+
+	
+
+}

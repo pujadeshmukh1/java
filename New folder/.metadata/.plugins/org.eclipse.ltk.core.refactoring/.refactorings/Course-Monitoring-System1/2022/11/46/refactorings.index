@@ -1,0 +1,51 @@
+1668008160194	Delete element
+1668009775325	Rename type 'AdmineDaoImpl'
+1668010656542	Delete element
+1668010684703	Delete element
+1668010777996	Delete element
+1668015871527	Delete element
+1668021810357	Delete element
+1668073678206	Rename type 'FacultyDao'
+1668073777003	Delete element
+1668085949971	Delete element
+1668102006691	Delete element
+1668102142472	Delete element
+1668157342798	Delete element
+1668168809453	Delete element
+1668168959493	Delete element
+1668168995984	Delete element
+1668169427079	Delete element
+1668169434192	Delete element
+1668170841082	Rename package 'Course'
+1668191364267	Delete element
+1668198514045	Rename type 'courses'
+1668198577374	Rename type 'course'
+1668259495127	Rename type 'AdminExcep'
+1668261562309	Delete element
+1668261594386	Delete element
+1668261626122	Rename package 'Adamin'
+1668263451587	Rename type 'AdminLogin_usecases'
+1668266522668	Delete element
+1668266528295	Delete element
+1668266534287	Delete element
+1668267021916	Rename type 'getAllFacultyDetails_useCases'
+1668267142226	Rename type 'Usecase_searchFacultyById'
+1668267162548	Rename type 'usecase_searchFacultyByName'
+1668267246764	Rename compilation unit 'Usecase_updateFacultyDetails.java'
+1668269165083	Delete element
+1668271266462	Delete element
+1668274964711	Delete element
+1668274975916	Delete element
+1668281137307	Delete element
+1668281195556	Delete element
+1668281272524	Delete element
+1668281378148	Delete element
+1668284827230	Delete element
+1668285223766	Delete element
+1668285423906	Delete element
+1668285801843	Delete element
+1668286771466	Rename type 'loginFaculty_usecases'
+1668288852819	Delete element
+1668289383471	Delete element
+1668295437216	Rename type 'CoursPlan'
+1668296744936	Delete element

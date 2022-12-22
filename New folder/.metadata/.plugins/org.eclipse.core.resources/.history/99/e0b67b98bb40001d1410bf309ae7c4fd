@@ -1,0 +1,10 @@
+package com.java;
+
+public class demo {
+	public static void main(String[] agrs) {
+		byte b = 10;
+		int x =b;
+		System.out.println(b);
+	}
+
+}

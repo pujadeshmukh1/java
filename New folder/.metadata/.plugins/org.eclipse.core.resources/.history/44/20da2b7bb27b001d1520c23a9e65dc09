@@ -1,0 +1,60 @@
+package com.gabby.Service;
+
+
+import java.util.Optional;
+
+import javax.security.auth.login.LoginException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.gabby.Exception.CustomerException;
+import com.gabby.model.Customer;
+import com.gabby.repository.CustomerRepo;
+
+@Service
+public class CustomerServiceImpl  implements CustomerService{
+
+	
+	 @Autowired
+	  private CustomerRepo cus;
+	
+	
+	
+	
+	
+	@SuppressWarnings("unused")
+	@Override
+	public Customer addCustomer(Customer customer) throws CustomerException {
+		// TODO Auto-generated method stub
+		
+		 Optional<Customer> s = cus.findById(customer.getCustomerId());
+		
+		 if(customer == null)
+		 {
+			 throw new CustomerException("Please Provide all valid Exception");
+		 }
+		 if(s.isPresent())
+		  {
+			  throw new CustomerException("Customer Already Exist");
+		  }
+		  else
+		  {
+			 return  cus.save(customer);
+		  }
+	}
+
+
+
+
+
+	@Override
+	public Customer updateCust(Customer customer, String key) throws CustomerException, LoginException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+		
+	
+}

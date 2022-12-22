@@ -1,0 +1,70 @@
+package Usecase_Faculty;
+import java.util.List;
+import java.util.Scanner;
+import Dao.FacultyDao;
+import Dao.FacultyDaoImpl;
+import Exceptions.FacultyException;
+import JavaBean.Faculty;
+import custom.ConsoleColors;
+
+public class usecase_searchFacultyByName {
+//	public static boolean searchByName() {
+//		
+//		
+//		@SuppressWarnings("resource")
+//		Scanner sc = new Scanner(System.in);
+//		
+//		System.out.println(ConsoleColors.CYAN+"Enter First Name of Faculty"+ConsoleColors.RESET);
+//		String fname = sc.next();
+//		
+//		FacultyDao dao = new FacultyDaoImpl();
+//
+//		
+//		try {
+//			List<Faculty> facultys = dao.searchFacultyByName(fname);
+//			
+//			facultys.forEach( f -> {
+//				System.out.println();
+//				System.out.println(ConsoleColors.ORANGE+"Faculty ID : " + f.getFacultyId());
+//				System.out.println("Faculty Name : " + f.getFname());
+//				System.out.println("Faculty Address : " + f.getAddress());
+//				System.out.println("Faculty Mobile : " + f.getMobile());
+//				System.out.println("Faculty Email : " + f.getEmail());
+//				System.out.println("Faculty Username : " + f.getUsername());
+//				System.out.println("------------------------------"+ConsoleColors.RESET);
+//				
+//			});
+//			System.out.println();
+//			
+//			
+//		} catch (FacultyException fe) {
+//			System.out.println();
+//			System.out.println(ConsoleColors.RED_BACKGROUND+fe.getMessage()+ConsoleColors.RESET);
+//			System.out.println();
+//			return false;
+//		}
+//	return true;
+//	
+//}
+
+
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	
+	System.out.println("Enter First Name of Faculty");
+    String fname = sc.next();
+    
+    FacultyDao dao = new FacultyDaoImpl();
+    
+    try {
+    	List<Faculty> facultys = dao.searchFacultyByName(name);
+    	facultys.forEach(faculty -> System.out.println(faculty));
+	} catch (FacultyException e) {
+		System.out.println(e.getMessage());
+		
+		// TODO: handle exception
+	}
+    
+	
+}
+}

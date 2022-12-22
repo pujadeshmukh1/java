@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.day6&apos; to &apos;first/src/com.hashset&apos;&#x0D;&#x0A;- Original project: &apos;first&apos;&#x0D;&#x0A;- Destination element: &apos;first/src/com.hashset&apos;&#x0D;&#x0A;- Original element: &apos;first/src/com.day6&apos;" description="Copy package" destination="/src&lt;com.hashset" element1="/src&lt;com.day6" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1665827870859" version="1.0"/>
+</session>

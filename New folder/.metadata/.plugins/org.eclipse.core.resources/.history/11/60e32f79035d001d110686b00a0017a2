@@ -1,0 +1,33 @@
+package com.masai.usescases;
+
+import java.util.Scanner;
+
+import com.masai.dao.StudentDaoImpl;
+
+public class InsertStudent1 {
+
+	private static String sname;
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter Roll : ");
+		int roll = sc.nextInt();
+		
+		System.out.println("Enter Name : ");
+		String name = sc.next();
+		
+		System.out.println("Enter marks : ");
+		int mark = sc.nextInt();
+		
+	
+	StudentDaoImpl dao = new StudentDaoImpl();
+	String result = dao.insertStudentDetails1(roll, sname, mark);
+	
+	System.out.println(result);
+	
+	}
+	
+	
+}

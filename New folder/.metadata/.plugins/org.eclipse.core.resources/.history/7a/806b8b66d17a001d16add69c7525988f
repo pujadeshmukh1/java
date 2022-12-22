@@ -1,0 +1,27 @@
+package com.masai.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.masai.exception.CustomerException;
+import com.masai.model.Customer;
+import com.masai.model.CustomerDTO;
+
+
+@Service
+public class CustomerServiceImpl implements CustomerService{
+
+	@Override
+	public Customer registerCustomer(Customer Customer) throws CustomerException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<CustomerDTO> getNameAddressAgeOfAllCustomers() throws CustomerException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

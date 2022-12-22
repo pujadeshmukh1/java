@@ -1,0 +1,20 @@
+Q2) What are the benefits of using Multithreading?
+
+
+Answer -:
+The benefits of multithreading are -
+
+1. It doesn't block the user because threads are independent 
+and you can perform multiple operations at the same time.
+
+2. You can perform many operations together, so it saves time.
+
+3. Threads are independent, so it doesn't affect other threads 
+if an exception occurs in a single thread.
+
+Some of application areas to apply multithreading:
+
+To develop multimedia graphics
+To develop animations
+To develop video games
+To develop Web Servers

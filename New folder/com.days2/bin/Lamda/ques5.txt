@@ -1,0 +1,86 @@
+Method Reference:
+It is a simplified form (short-cut ) of Lambda Expression.
+Java provides a new feature called method reference in Java 8. Method reference is used to refer method
+of functional interface. It is compact and easy form of lambda expression.
+Instead of creating a Lambda Expression with all the details, with the help of method reference we can
+refer an existing class method to the functional interface implementation, which matches the condition of
+Lambda Expression.
+
+
+
+Types of Method References:
+There are following types of method references in java:
+1. Reference to a static method.
+2. Reference to an instance (non-static) method.
+3. Reference to a constructor.
+
+
+
+1.Reference to a Static Method:
+You can refer to static method defined in the class as an implementation of a functional interface.
+Syntax:
+ClassName::methodName
+Example:
+Day13: Functional Interface in java8, Lambda Expression, Method reference, Java Stream API with functional
+programming
+11
+@FunctionalInterface
+interface Intr{
+void sayHello(String name);
+}
+public class Main {
+public static void fun1(String s){
+System.out.println("Using static Method reference Welcome "+s);
+}
+public static void main(String[] args) {
+Intr i1 = Main::fun1;
+i1.sayHello("Admin");
+}
+}
+
+
+
+2.Reference to an instance (non-static) method:
+Syntax:
+object::methodName
+Example:
+@FunctionalInterface
+interface Intr{
+void printNumber(int number);
+}
+public class Main {
+public void fun1(int num){
+System.out.println("Using non-static Method reference Welcome "+num);
+}
+public static void main(String[] args) {
+Intr i1 = new Main()::fun1;
+i1.printNumber(12);
+Intr i2 = System.out::print;
+i2.printNumber(15);
+}
+}
+
+
+
+3.Reference to a constructor:
+Syntax:
+ClassName::new
+Example:
+@FunctionalInterface
+interface Intr{
+void sayHello();
+}
+public class Main {
+Main(){
+System.out.println("Method reference using Constructor");
+}
+public static void main(String[] args) {
+Day13: Functional Interface in java8, Lambda Expression, Method reference, Java Stream API with functional
+programming
+13
+Intr i1 = Main::new;
+i1.sayHello();
+}
+}
+
+
